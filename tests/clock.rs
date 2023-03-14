@@ -5,6 +5,27 @@ use clock::Clock;
 //
 
 #[test]
+fn try_convert(){
+    assert_eq!(Clock::convert_to_hours(0, 3500), (1,1))
+}
+
+#[test]
+fn try_convert_negatif(){
+    assert_eq!(Clock::convert_to_hours(0 , 0 - 1), (-1,59))
+}
+
+#[test]
+fn try_convert_hours(){
+    assert_eq!(Clock::convert_hours_in_24h_range(26), 2)
+}
+
+#[test]
+fn try_convert_neg_hours(){
+    assert_eq!(Clock::convert_hours_in_24h_range(-2), 22)
+}
+
+
+#[test]
 fn test_on_the_hour() {
     assert_eq!(Clock::new(8, 0).to_string(), "08:00");
 }
