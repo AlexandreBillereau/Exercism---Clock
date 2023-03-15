@@ -1,3 +1,5 @@
+# :white_check_mark: SUCCESS :white_check_mark:
+
 # Clock
 
 Welcome to Clock on Exercism's Rust Track.

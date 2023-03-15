@@ -12,9 +12,10 @@ impl Clock {
     pub fn new(hours: i32, minutes: i32) -> Self {
 
         
-        let (hours, minutes) = Clock::convert_to_hours(hours, minutes);
-        
         let hours = Clock::convert_hours_in_24h_range(hours);
+        let (hours, minutes) = Clock::convert_to_hours(hours, minutes);
+        let hours = Clock::convert_hours_in_24h_range(hours);
+        
         Clock { hours, minutes }
     }
 
